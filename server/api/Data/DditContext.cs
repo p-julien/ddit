@@ -1,7 +1,7 @@
 ﻿using api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace api.Contexts;
+namespace api.Data;
 
 public class DditContext : DbContext
 {
