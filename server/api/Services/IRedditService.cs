@@ -4,6 +4,6 @@ namespace api.Services
 {
     public interface IRedditService
     {
-        IEnumerable<Reddit> Get();
+        Task<IEnumerable<Reddit>> Get();
     }
 }

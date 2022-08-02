@@ -26,6 +26,6 @@ namespace api.Services.Mock
             }
         };
         
-        public IEnumerable<Reddit> Get() => _reddits;
+        public Task<IEnumerable<Reddit>> Get() => Task.FromResult(_reddits);
     }
 }

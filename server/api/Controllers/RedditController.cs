@@ -16,6 +16,6 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Reddit> Get() => _redditService.Get();
+        public async Task<IEnumerable<Reddit>> Get() => await _redditService.Get();
     }
 }

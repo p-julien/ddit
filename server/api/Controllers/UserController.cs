@@ -7,7 +7,7 @@ namespace api.Controllers;
 [ApiController]
 public class UserController : ControllerBase
 {
-    private readonly User[] _users = new[]
+    private readonly IEnumerable<User> _users = new List<User>
     {
         new User { Id = 1, Name = "href404" },
         new User { Id = 2, Name = "CodeM" },
@@ -23,9 +23,9 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<User> Get()
+    public Task<IEnumerable<User>> Get()
     {
         _logger.LogInformation("Get users is called");
-        return _users;
+        return Task.FromResult(_users);
     }
 }
