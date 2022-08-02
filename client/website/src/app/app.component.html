@@ -1,3 +1,9 @@
+<h3>Reddits</h3>
+
+<p *ngIf="error" style="color: red; font-weight: bold">
+  {{ error }}
+</p>
+
 <div *ngFor="let reddit of reddits">
   <p>{{ reddit.name }} - {{ reddit.followers }}</p>
   <img [src]="reddit.pictureUrl" height="100" width="100" />

@@ -10,12 +10,14 @@ import { Reddit } from './models/reddit.model';
 })
 export class AppComponent implements OnInit {
   reddits: Reddit[] = [];
+  error: string = '';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http
-      .get<Reddit[]>(environment.baseUrl + '/reddits')
-      .subscribe((reddits) => (this.reddits = reddits));
+    this.http.get<Reddit[]>(environment.baseUrl + '/reddits').subscribe({
+      next: (v) => (this.reddits = v),
+      error: (e) => (this.error = e.message),
+    });
   }
 }
