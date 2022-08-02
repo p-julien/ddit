@@ -1,9 +1,8 @@
 ﻿using api.Models;
 
-namespace api.Services
+namespace api.Services;
+
+public interface IRedditService
 {
-    public interface IRedditService
-    {
-        Task<IEnumerable<Reddit>> Get();
-    }
+    Task<IEnumerable<Reddit>> Get();
 }
