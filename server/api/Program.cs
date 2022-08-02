@@ -1,10 +1,10 @@
 using api.Services;
-using api.Services.Mock;
+using api.Services.Implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton<IRedditService, RedditServiceMock>();
+builder.Services.AddSingleton<IRedditService, RedditService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
