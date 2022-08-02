@@ -16,5 +16,8 @@ public class RedditController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<Reddit>> Get() => await _redditService.Get();
+    public async Task<IEnumerable<Reddit>> Get()
+    {
+        return await _redditService.Get();
+    }
 }
