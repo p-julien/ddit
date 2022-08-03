@@ -24,7 +24,7 @@ jobs:
           cache-dependency-path: client/website
       - run: npm i
         working-directory: client/website
-      - run: npm run build
+      - run: npm build
         working-directory: client/website
-      - run: npm run test
+      - run: npm test -- --watch=false --browsers=ChromeHeadless
         working-directory: client/website
