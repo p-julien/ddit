@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
           cache-dependency-path: client/admin
-      - run: npm i
+      - run: npm install
         working-directory: client/admin
       - run: npm run build
         working-directory: client/admin
