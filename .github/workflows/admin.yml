@@ -1,4 +1,4 @@
-name: AdminApp CI
+name: AdminWebsite CI
 
 on:
   push:
@@ -21,9 +21,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          cache-dependency-path: client/admin
       - run: npm i
         working-directory: client/admin
       - run: npm run build
         working-directory: client/admin
       - run: npm run test
-        working-directory: client/website
+        working-directory: client/admin
