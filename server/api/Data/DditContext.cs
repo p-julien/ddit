@@ -1,7 +1,7 @@
-﻿using api.Models;
+﻿using fr.pierrejulien.ddit.api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace api.Data;
+namespace fr.pierrejulien.ddit.api.Data;
 
 public class DditContext : DbContext
 {

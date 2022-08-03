@@ -1,6 +1,6 @@
-﻿using api.Models;
+﻿using fr.pierrejulien.ddit.api.Models;
 
-namespace api.Services.Mock;
+namespace fr.pierrejulien.ddit.api.Services.Mock;
 
 public class RedditServiceMock : IRedditService
 {
@@ -25,6 +25,6 @@ public class RedditServiceMock : IRedditService
             PictureUrl = "https://styles.redditmedia.com/t5_2quee/styles/communityIcon_fxk55j1c4mm81.png?width=256&s=b125b9711abaac3712dbaf7addc2ff6d8752afeb"
         }
     };
-    
+
     public Task<IEnumerable<Reddit>> Get() => Task.FromResult(_reddits);
 }

@@ -1,8 +1,8 @@
-﻿using api.Models;
-using api.Services;
+﻿using fr.pierrejulien.ddit.api.Models;
+using fr.pierrejulien.ddit.api.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers;
+namespace fr.pierrejulien.ddit.api.Controllers;
 
 [Route("reddits")]
 [ApiController]

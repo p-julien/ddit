@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace api.Models;
+namespace fr.pierrejulien.ddit.api.Models;
 
 [Table("reddits")]
 public class Reddit

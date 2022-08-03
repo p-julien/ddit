@@ -1,6 +1,6 @@
-using api.Services;
-using api.Services.Implementation;
-using api.Services.Mock;
+using fr.pierrejulien.ddit.api.Services;
+using fr.pierrejulien.ddit.api.Services.Implementation;
+using fr.pierrejulien.ddit.api.Services.Mock;
 
 var builder = WebApplication.CreateBuilder(args);
 

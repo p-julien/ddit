@@ -1,9 +1,9 @@
-using api.Data;
-using api.Models;
+using fr.pierrejulien.ddit.api.Data;
+using fr.pierrejulien.ddit.api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace api.Controllers;
+namespace fr.pierrejulien.ddit.api.Controllers;
 
 [Route("users")]
 [ApiController]
