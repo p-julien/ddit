@@ -9,5 +9,5 @@ public class DditContext : DbContext
     public DbSet<Reddit> Reddits { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlite(@"Data Source=D:\Code\ddit\server\data\database.db3");
+        => options.UseSqlite(@"Data Source=database.db3");
 }
