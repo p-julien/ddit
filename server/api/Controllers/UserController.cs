@@ -11,11 +11,12 @@ namespace fr.pierrejulien.ddit.api.Controllers;
 public class UserController : ControllerBase
 {
     private readonly ILogger<UserController> _logger;
-    private readonly IPasswordHasher<User> _passwordHasher = new PasswordHasher<User>();
+    private readonly IPasswordHasher<User> _passwordHasher;
 
-    public UserController(ILogger<UserController> logger)
+    public UserController(ILogger<UserController> logger, IPasswordHasher<User> passwordHasher)
     {
         _logger = logger;
+        _passwordHasher = passwordHasher;
     }
 
     [HttpPost]

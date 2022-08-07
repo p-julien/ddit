@@ -1,6 +1,8 @@
+using fr.pierrejulien.ddit.api.Models;
 using fr.pierrejulien.ddit.api.Services;
 using fr.pierrejulien.ddit.api.Services.Implementation;
 using fr.pierrejulien.ddit.api.Services.Mock;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ const bool isMock = false;
 
 // Add services to the container.
 _ = isMock ? RegisterMockServices(builder) : RegisterServices(builder);
+
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 builder.Services.AddControllers();
 
