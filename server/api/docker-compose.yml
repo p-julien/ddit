@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: ddit-api
+    command: dotnet /app/fr.pierrejulien.ddit-api.dll
+    ports:
+      - 8080:80
+    volumes:
+      - ./database.db3:app/database.db3

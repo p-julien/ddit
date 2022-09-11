@@ -6,7 +6,7 @@ namespace fr.pierrejulien.ddit.api.Services.Implementation;
 
 public class RedditService : IRedditService
 {
-    public async Task<IEnumerable<Reddit>> Get()
+    public async Task<IEnumerable<RedditModel>> Get()
     {
         using var context = new DditContext();
         return await context.Reddits.ToListAsync();

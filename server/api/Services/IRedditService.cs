@@ -4,5 +4,5 @@ namespace fr.pierrejulien.ddit.api.Services;
 
 public interface IRedditService
 {
-    Task<IEnumerable<Reddit>> Get();
+    Task<IEnumerable<RedditModel>> Get();
 }
